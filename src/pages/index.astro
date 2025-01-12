@@ -1,6 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
 import Section01 from "../components/home/Section_01.astro";
+import fotoAlexsandra from "../assets/foto_Alexsandra.jpg";
 ---
 
 <head>
@@ -9,6 +11,31 @@ import Section01 from "../components/home/Section_01.astro";
 </head>
 
 <Layout>
-	<h1 class="text-2xl">Teste de titulo</h1>
-	<p>Teste de texto</p>
+	<div
+		class="w-full h-[400px] xl:h-[600px] bg-gray-500 flex flex-row justify-center items-center"
+	>
+		<h1 class="text-center text-5xl font-halimum leading-[70px] text-white">
+			Seja Bem-Vindo!
+		</h1>
+	</div>
+	<div class="w-full flex flex-col justify-center items-center">
+		<div class="flex flex-row w-screen-content-limit my-10">
+			<div class="w-1/2 flex flex-row justify-center items-center">
+				<Image
+					class={"rounded-md"}
+					width={"400"}
+					src={fotoAlexsandra}
+					alt={"Foto Alexsandra"}
+				/>
+			</div>
+			<div class="w-1/2 flex flex-col justify-center">
+				<h2 class="text-4xl">Sobre mim:</h2>
+				<p>
+					{
+						"Meu nome é Alexandra Beijato e sou artista plástica desde o ano 2000. Trabalho com a técnica de pintura a óleo, que me permite explorar cores, formas e detalhes para criar obras que capturam momentos, emoções e perspectivas únicas.Sou apaixonada pelo que faço e acredito que a arte é uma forma poderosa de transformar ambientes e inspirar as pessoas. Agradeço a Deus todos os dias por me permitir exercer esse dom e compartilhar meu trabalho com o mundo. Cada peça que produzo é desenvolvida com cuidado, dedicação e atenção aos detalhes, refletindo minha experiência e o amor pelo meu ofício. Seja bem-vindo(a) ao meu espaço criativo!"
+					}
+				</p>
+			</div>
+		</div>
+	</div>
 </Layout>
