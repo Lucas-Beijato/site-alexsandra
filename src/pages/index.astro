@@ -29,6 +29,11 @@ import SectionFeatured from "../components/home/Section_featured.astro";
 					src="/pictures/foto_Alexsandra_2.avif"
 					alt={"Foto Alexsandra"}
 				/> -->
+				<picture>
+					<source srcset="/pictures/foto_Alexsandra_2.avif" type="image/avif">
+					<source srcset="/pictures/foto_Alexsandra_2.webp" type="image/webp">
+					<img src="/pictures/foto_Alexsandra_2.jpg" alt="Foto Alexsandra">
+				</picture>
 			</div>
 			<div class="w-full xl:w-1/2 flex flex-col justify-center">
 				<h2 class="text-4xl">Sobre mim:</h2>
