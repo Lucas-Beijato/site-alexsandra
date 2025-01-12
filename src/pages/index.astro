@@ -18,9 +18,10 @@ import SectionFeatured from "../components/home/Section_featured.astro";
 			Seja Bem-Vindo!
 		</h1>
 	</div>
+	
 	<div class="w-full flex flex-col justify-center items-center">
-		<div class="flex flex-row w-screen-content-limit my-10">
-			<div class="w-1/2 flex flex-row justify-center items-center">
+		<div class="flex flex-col gap-y-5 xl:flex-row w-full xl:w-screen-content-limit px-5 my-10">
+			<div class="w-full xl:w-1/2 flex flex-row justify-center items-center">
 				<Picture
 				formats={['avif', 'webp']}
 					class={"rounded-md"}
@@ -29,7 +30,7 @@ import SectionFeatured from "../components/home/Section_featured.astro";
 					alt={"Foto Alexsandra"}
 				/>
 			</div>
-			<div class="w-1/2 flex flex-col justify-center">
+			<div class="w-full xl:w-1/2 flex flex-col justify-center">
 				<h2 class="text-4xl">Sobre mim:</h2>
 				<p>
 					{
@@ -41,15 +42,15 @@ import SectionFeatured from "../components/home/Section_featured.astro";
 	</div>
 
 	<div class="w-full flex flex-col justify-center items-center mt-12">
-		<div class="w-screen-content-limit">
-	<SectionFeatured/>
+		<div class="w-full xl:w-screen-content-limit px-5">
+			<SectionFeatured/>
 		</div>
 	</div>
 	
 	<div class="w-full flex flex-col justify-center items-center bg-gray-500">
-		<div class="flex flex-col w-screen-content-limit my-10 py-10 gap-y-4">
-			<h3 class="text-white text-center text-2xl">Acompanhe meu trabalho nas redes sociais e fique por dentro de novas criações, novidades e tudo o que acontece no meu universo artístico.</h3>
-			<h2 class="text-white text-center text-4xl">Obrigada pela visita!</h2>
+		<div class="flex flex-col w-full xl:w-screen-content-limit my-10 py-10 gap-y-4">
+			<p class="text-white text-center xl:text-2xl">Acompanhe meu trabalho nas redes sociais e fique por dentro de novas criações, novidades e tudo o que acontece no meu universo artístico.</p>
+			<h2 class="text-white text-center text-2xl xl:text-4xl">Obrigada pela visita!</h2>
 		</div>
 	</div>
 </Layout>
