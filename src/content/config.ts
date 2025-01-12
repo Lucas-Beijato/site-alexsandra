@@ -15,9 +15,7 @@ const canvasesCollection = defineCollection({
     painting_style: z.string(),
     featured: z.boolean(),
     for_sale: z.boolean(),
-    price: z.number(),
-    // created_at
-    // updated_at
+    price: z.number()
   }),
 });
 

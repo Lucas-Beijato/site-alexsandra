@@ -1,8 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
-import Section01 from "../components/home/Section_01.astro";
 import fotoAlexsandra from "../assets/foto_Alexsandra.jpg";
+import SectionFeatured from "../components/home/Section_featured.astro";
 ---
 
 <head>
@@ -36,6 +36,19 @@ import fotoAlexsandra from "../assets/foto_Alexsandra.jpg";
 					}
 				</p>
 			</div>
+		</div>
+	</div>
+
+	<div class="w-full flex flex-col justify-center items-center mt-12">
+		<div class="w-screen-content-limit">
+	<SectionFeatured/>
+		</div>
+	</div>
+	
+	<div class="w-full flex flex-col justify-center items-center bg-gray-500">
+		<div class="flex flex-col w-screen-content-limit my-10 py-10 gap-y-4">
+			<h3 class="text-white text-center text-2xl">Acompanhe meu trabalho nas redes sociais e fique por dentro de novas criações, novidades e tudo o que acontece no meu universo artístico.</h3>
+			<h2 class="text-white text-center text-4xl">Obrigada pela visita!</h2>
 		</div>
 	</div>
 </Layout>
