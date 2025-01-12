@@ -1,0 +1,146 @@
+---
+import { Image } from "astro:assets";
+import logo from "../../assets/logo.png";
+---
+
+<header
+  class="hidden justify-center items-center sm:hidden xl:flex border-b border-gray-200"
+>
+  <div
+    class="w-screen-content-limit flex flex-wrap sm:justify-start sm:flex-nowrap text-sm py-3"
+  >
+    <nav class="w-full px-4 flex flex-row justify-between">
+      <div class="w-1/3 flex justify-start">
+        <a href="/">
+          <Image width={"100"} src={logo} alt={"logo"} />
+        </a>
+      </div>
+      <div class="flex flex-row items-center justify-center w-1/3 gap-5">
+        <a
+          class="font-medium text-lg text-light-brown hover:text-medium-brown focus:outline-none transform duration-150"
+          href="/"
+          aria-current="page">Home</a
+        >
+        <a
+          class="font-medium text-lg text-light-brown hover:text-medium-brown focus:outline-none transform duration-150"
+          href="/sobre">Sobre</a
+        >
+        <a
+          class="font-medium text-lg text-light-brown hover:text-medium-brown focus:outline-none transform duration-150"
+          href="/galeria">Galeria</a
+        >
+        <a
+          class="font-medium text-lg text-light-brown hover:text-medium-brown focus:outline-none transform duration-150"
+          href="/a_venda">A Venda</a
+        >
+      </div>
+      <div class="w-1/3 flex flex-row justify-end items-center gap-x-2">
+        <a
+          class="ms-0 py-2 px-2 flex justify-center text-base font-medium rounded-lg items-center gap-x-2 h-fit border-2 border-medium-brown bg-medium-brown hover:bg-dark-brown text-white focus:outline-none focus:bg-medium-brown transition duration-150"
+          href="contato">Contato</a
+        >
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- Mobile -->
+<header
+  class="flex justify-center items-center sm:flex xl:hidden border-b border-gray-200"
+>
+  <div
+    class="flex flex-wrap sm:justify-start sm:flex-nowrap w-[1280px] bg-white text-sm py-3 dark:bg-neutral-800"
+  >
+    <nav
+      class="max-w-[85rem] w-full flex mx-auto px-4 sm:flex items-center justify-between"
+    >
+      <a href="/">
+        <Image width={"80"} src={logo} alt={"logo"} />
+      </a>
+      <button
+        type="button"
+        class="ms-0 py-1 px-1 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border-2 border-medium-brown text-white focus:outline-none"
+        aria-haspopup="dialog"
+        aria-expanded="false"
+        aria-controls="hs-offcanvas-right"
+        data-hs-overlay="#hs-offcanvas-right"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          ><path
+            fill="#62300a"
+            stroke="#62300a"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"></path></svg
+        >
+      </button>
+
+      <div
+        id="hs-offcanvas-right"
+        class="hs-overlay hs-overlay-open:translate-x-0 hidden translate-x-full fixed top-0 end-0 transition-all duration-300 transform h-full max-w-xs w-full z-[80] bg-white border-s dark:bg-neutral-800 dark:border-neutral-700"
+        role="dialog"
+        tabindex="-1"
+        aria-labelledby="hs-offcanvas-right-label"
+      >
+        <div
+          class="flex justify-between items-center py-3 px-4 border-b dark:border-neutral-700"
+        >
+          <h2
+            id="hs-offcanvas-right-label"
+            class="text-medium-brown dark:text-white"
+          >
+            Explorar
+          </h2>
+          <button
+            type="button"
+            class="ms-0 py-1 px-1 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border-2 border-medium-brown text-white focus:outline-none"
+            aria-label="Close"
+            data-hs-overlay="#hs-offcanvas-right"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              ><path
+                fill="#62300a"
+                stroke="#62300a"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M18 6L6 18M6 6l12 12"></path></svg
+            >
+          </button>
+        </div>
+        <div class="p-4 flex flex-col space-y-4">
+          <a
+            class="font-medium text-lg text-light-brown hover:text-medium-brown focus:outline-none transform duration-150"
+            href="/"
+            aria-current="page">Home</a
+          >
+          <a
+            class="font-medium text-lg text-light-brown hover:text-medium-brown focus:outline-none transform duration-150"
+            href="/sobre">Sobre</a
+          >
+          <a
+            class="font-medium text-lg text-light-brown hover:text-medium-brown focus:outline-none transform duration-150"
+            href="/galeria">Galeria</a
+          >
+          <a
+            class="font-medium text-lg text-light-brown hover:text-medium-brown focus:outline-none transform duration-150"
+            href="/a_venda">A Venda</a
+          >
+          <a
+            class="ms-0 py-1 px-1 flex justify-center text-lg font-medium rounded-lg border border-transparent bg-medium-brown text-white hover:bg-dark-brown focus:outline-none focus:bg-dark-brown transition duration-150"
+            href="contato">Contato</a
+          >
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>

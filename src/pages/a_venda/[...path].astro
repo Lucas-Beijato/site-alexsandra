@@ -1,0 +1,26 @@
+---
+import { getEntry } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+export const prerender = false;
+
+const { path } = Astro.params;
+if (!path) {
+    return Astro.redirect("/404");
+}
+
+const canvas = await getEntry("canvases", path);
+
+if (!canvas || canvas.data.for_sale === false) {
+    return Astro.redirect("/404");
+}
+---
+
+<head>
+    <meta name="description" content="test" />
+    <title>{canvas.data.name + " | Alexsandra Beijato"}</title>
+</head>
+
+<Layout>
+    <p>{canvas?.data.description}</p>
+    <p>{canvas?.body}</p>
+</Layout>

@@ -1,0 +1,30 @@
+---
+export const prerender = false;
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+
+const CanvasesForSale = await getCollection("canvases", (canvas) => {
+    if (canvas.data.for_sale === true) {
+        return canvas;
+    }
+});
+---
+
+<head>
+    <meta name="description" content="test" />
+    <title>{"A Venda" + " | Alexsandra Beijato"}</title>
+</head>
+
+<Layout>
+    <h1>A Venda</h1>
+    <ul>
+        {
+            CanvasesForSale.map((canvas) => (
+                <li>
+                    <h3>{canvas.data.name}</h3>
+                    <a href={"/for_sale/" + canvas.data.slug}>Acessar</a>
+                </li>
+            ))
+        }
+    </ul>
+</Layout>
