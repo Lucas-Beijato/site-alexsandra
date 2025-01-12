@@ -1,7 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { Picture  } from "astro:assets";
-import fotoAlexsandra from "../assets/foto_Alexsandra_2.jpg";
 import SectionFeatured from "../components/home/Section_featured.astro";
 ---
 
@@ -23,10 +22,11 @@ import SectionFeatured from "../components/home/Section_featured.astro";
 		<div class="flex flex-col gap-y-5 xl:flex-row w-full xl:w-screen-content-limit px-5 my-10">
 			<div class="w-full xl:w-1/2 flex flex-row justify-center items-center">
 				<Picture 
-				formats={['avif', 'webp']}
+				formats={['webp', 'jpg']}
 					class={"rounded-md"}
 					width={"400"}
-					src={fotoAlexsandra}
+					height={"400"}
+					src="/pictures/foto_Alexsandra_2.avif"
 					alt={"Foto Alexsandra"}
 				/>
 			</div>
