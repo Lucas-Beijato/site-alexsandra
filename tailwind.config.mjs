@@ -19,8 +19,5 @@ export default {
         'cream': '#f6f3ee',
       },
     },
-  },
-  plugins: [
-    require('preline/plugin'),
-  ],
+  }
 };

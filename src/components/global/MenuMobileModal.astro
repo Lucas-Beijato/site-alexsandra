@@ -1,0 +1,120 @@
+---
+---
+
+<!-- Open modal BTN -->
+<button class="border border-dark-brown rounded-md px-1 py-1" id="open-menu-mobile">
+  <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      ><path
+        fill="#62300a"
+        stroke="#62300a"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M4 6h16M4 12h16M4 18h16"></path></svg
+    >
+</button>
+
+<!-- Modal -->
+<div 
+  class="modal-overlay"
+>
+  <div 
+    class="modal-content w-full xl:w-96 mx-5"
+  >
+    
+    <div class="flex flex-row justify-end w-full">
+      <button id="close-menu-mobile"> 
+        <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        ><path
+          fill="#62300a"
+          stroke="#62300a"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M18 6L6 18M6 6l12 12"></path></svg
+        >
+      </button>
+    </div>
+
+    <div class="p-4 flex flex-col space-y-4">
+      <a
+        class="font-medium text-lg text-light-brown hover:text-medium-brown focus:outline-none transform duration-150"
+        href="/"
+        aria-current="page">Home</a
+      >
+      <a
+        class="font-medium text-lg text-light-brown hover:text-medium-brown focus:outline-none transform duration-150"
+        href="/sobre">Sobre</a
+      >
+      <a
+        class="font-medium text-lg text-light-brown hover:text-medium-brown focus:outline-none transform duration-150"
+        href="/galeria">Galeria</a
+      >
+      <a
+        class="font-medium text-lg text-light-brown hover:text-medium-brown focus:outline-none transform duration-150"
+        href="/a_venda">A Venda</a
+      >
+      <a
+        class="ms-0 py-1 px-1 flex justify-center text-lg font-medium rounded-lg border border-transparent bg-medium-brown text-white hover:bg-dark-brown focus:outline-none focus:bg-dark-brown transition duration-150"
+        href="contato">Contato</a
+      >
+    </div>
+
+  </div>
+</div>
+
+<script>
+    const modal = document.querySelector('div[class="modal-overlay"]')
+
+    document.getElementById('open-menu-mobile').addEventListener("click", () => {
+      modal.classList.toggle("visible")
+    })
+    
+    document.getElementById('close-menu-mobile').addEventListener("click", () => {
+      modal.classList.toggle("visible")
+    })
+</script>
+
+<style>
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+  }
+
+  .modal-overlay.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .modal-content {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    position: relative;
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+  }
+
+  .modal-overlay.visible .modal-content {
+    transform: translateY(0);
+  }
+</style>
