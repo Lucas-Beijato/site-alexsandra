@@ -7,26 +7,10 @@ const featured = await getCollection("canvases", (canvas) => {
     return canvas;
   }
 });
-
-
-// {
-//           featured.map((item) => {
-//             if (item.data.for_sale) {
-//               return (
-//                 <div class="hs-carousel-slide px-1">
-//                   <div class="flex justify-center h-full bg-gray-100 p-6 dark:bg-neutral-900">
-//                     <span class="self-center text-sm text-gray-800 transition duration-700 dark:text-white">
-//                       {item.data.slug}
-//                     </span>
-//                   </div>
-//                 </div>
-//               );
-//             }
-//           })
-//         }
 ---
 
 <div class="flex flex-col gap-y-10 my-10">
+  
   <div class="flex flex-row justify-between items-center">
     <h3 class="text-lg xl:text-2xl">Coleção Destaque</h3>
     <a
@@ -49,9 +33,12 @@ const featured = await getCollection("canvases", (canvas) => {
     }
   </div>
 
+  <p class="text-base xl:text-lg">Explore as obras em destaque e descubra peças que contam histórias através da arte a óleo.</p>
+
 </div>
 
 <div class="flex flex-col gap-y-10 my-10">
+  
   <div class="flex flex-row justify-between items-center">
     <h3 class="text-lg xl:text-2xl">Destaques a venda</h3>
     <a
@@ -72,8 +59,9 @@ const featured = await getCollection("canvases", (canvas) => {
         }
       })
     }
-      
   </div>
+
+  <p class="text-base xl:text-lg"> Leve um toque de arte para sua vida. Confira as peças disponíveis para adquirir e transformar seus espaços.</p>
 
 </div>
 
