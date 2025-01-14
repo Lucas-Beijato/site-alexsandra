@@ -22,7 +22,7 @@ const CanvasesGallery = await getCollection("canvases", (canvas) => {
             CanvasesGallery.map((canvas) => (
                 <li>
                     <h3>{canvas.data.name}</h3>
-                    <a href={"/gallery/" + canvas.data.slug}>Acessar</a>
+                    <a href={"/galeria/" + canvas.data.slug}>Acessar</a>
                 </li>
             ))
         }
