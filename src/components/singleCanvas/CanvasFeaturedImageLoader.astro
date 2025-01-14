@@ -1,0 +1,18 @@
+---
+import type { ImagesUrls } from "../../assets/types"
+
+const { featuredImageUrl } = Astro.props
+
+const UrlsFeaturedImage: ImagesUrls = {
+  avif: `${featuredImageUrl}.avif`,
+  webp: `${featuredImageUrl}.webp`,
+  jpg: `${featuredImageUrl}.jpg`,
+}
+---
+
+<picture>
+    <source srcset={UrlsFeaturedImage.webp} type="image/webp">
+    <source srcset={UrlsFeaturedImage.avif} type="image/avif">
+    <img width="600" height="600" class="rounded-md" src={UrlsFeaturedImage.jpg} alt="Foto Alexsandra">
+</picture>
+

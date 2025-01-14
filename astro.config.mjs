@@ -6,4 +6,8 @@ export default defineConfig({
   adapter: cloudflare(),
   output: "server",
   integrations: [tailwind()],
+
+  image: {
+    domains: [""],
+  }
 });
