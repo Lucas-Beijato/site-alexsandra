@@ -1,0 +1,16 @@
+---
+import type { ImagesUrls } from "../../assets/types"
+
+const UrlsImageAlexs: ImagesUrls = {
+  avif: "/pictures/base/foto_Alexsandra.avif",
+  webp: "/pictures/base/foto_Alexsandra.webp",
+  jpg: "/pictures/base/foto_Alexsandra.jpg"
+}
+---
+
+<picture>
+    <source srcset={UrlsImageAlexs.webp} type="image/webp">
+    <source srcset={UrlsImageAlexs.avif} type="image/avif">
+    <img width="400" height="400" class="rounded-md" src={UrlsImageAlexs.jpg} alt="Foto Alexsandra">
+</picture>
+

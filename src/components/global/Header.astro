@@ -1,4 +1,5 @@
 ---
+import LogoImageLoader from "./LogoImageLoader.astro"
 import MenuMobileModal from "./MenuMobileModal.astro"
 ---
 
@@ -11,11 +12,7 @@ import MenuMobileModal from "./MenuMobileModal.astro"
     <nav class="w-full px-4 flex flex-row justify-between">
       <div class="w-1/3 flex justify-start">
         <a href="/">
-        <picture>
-					<source srcset="/pictures/logo_2.webp" type="image/webp">
-					<source srcset="/pictures/logo_2.jpg" type="image/jpg">
-					<img width="100" height="64" class="rounded-md" src="/pictures/logo_2.avif" alt="Foto Alexsandra">
-				</picture>
+          <LogoImageLoader/>
         </a>
       </div>
       <div class="flex flex-row items-center justify-center w-1/3 gap-5">
@@ -58,11 +55,7 @@ import MenuMobileModal from "./MenuMobileModal.astro"
       class="max-w-[85rem] w-full flex mx-auto px-4 sm:flex items-center justify-between"
     >
       <a href="/">
-        <picture>
-					<source srcset="/pictures/logo_2.webp" type="image/webp">
-					<source srcset="/pictures/logo_2.jpg" type="image/jpg">
-					<img width="100" height="64" class="rounded-md" src="/pictures/logo_2.avif" alt="Foto Alexsandra">
-				</picture>
+        <LogoImageLoader/>
       </a>
 
       <MenuMobileModal/>
