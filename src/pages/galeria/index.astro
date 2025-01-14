@@ -2,6 +2,7 @@
 export const prerender = false;
 import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
+import ImageLoader from "../../components/global/ImageLoader.astro";
 
 const CanvasesGallery = await getCollection("canvases", (canvas) => {
     if (canvas.data.for_sale === false) {
@@ -16,15 +17,34 @@ const CanvasesGallery = await getCollection("canvases", (canvas) => {
 </head>
 
 <Layout>
-    <h1>Galeria</h1>
-    <ul>
-        {
-            CanvasesGallery.map((canvas) => (
-                <li>
-                    <h3>{canvas.data.name}</h3>
-                    <a href={"/galeria/" + canvas.data.slug}>Acessar</a>
-                </li>
-            ))
-        }
-    </ul>
+
+    <div class="w-full flex flex-col justify-center items-center">
+        <div class="w-full xl:w-screen-content-limit flex flex-col justify-center items-center my-20 gap-20 px-4">
+
+            <div class="flex flex-col w-full">
+                <h1 class="w-full font-glacial-indifference text-6xl">Galeria</h1>
+                <p class="w-full">Confira todas as minhas artes já feitas.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 grid-flow-row gap-4">
+                {
+                  CanvasesGallery.map((item) => {
+                    if (!item.data.for_sale) {
+                      return (
+                        <a href={`/galeria/${item.data.slug}`}>
+                          <div class="flex flex-col justify-start items-start bg-gray-100 rounded-md hover:bg-dark-brown hover:text-white transition duration-150 transform">
+                            <ImageLoader ImageUrl={item.data.featured_image} w="400" h="400"/>
+                            <div class="px-3 pb-3">
+                              <h3 class="mt-4 text-xl">{item.data.name}</h3>
+                            </div>
+                          </div>
+                        </a>
+                      );
+                    }
+                  })
+                }
+              </div>
+        </div>
+    </div>
+
 </Layout>
