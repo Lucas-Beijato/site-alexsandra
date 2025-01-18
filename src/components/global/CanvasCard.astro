@@ -8,7 +8,12 @@ const { slug, featured_image_url, name, description } = Astro.props;
     <div
         class="bg-white min-w-[250px] hover:bg-gray-100 transition duration-150 shadow-lg rounded-lg overflow-hidden border border-black"
     >
-        <ImageLoader ImageUrl={featured_image_url} w="350" fullW="true" />
+        <ImageLoader
+            ImageUrl={featured_image_url}
+            w="350"
+            h="350"
+            fullW="true"
+        />
         <div class="p-4">
             <h2 class="text-lg font-semibold text-gray-800 truncate">
                 {name}
