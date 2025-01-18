@@ -10,7 +10,7 @@ const UrlsImage: ImagesUrls = {
 };
 ---
 
-<picture>
+<picture class={fullW ? "w-full" : " "}>
   <source srcset={UrlsImage.webp} type="image/webp" />
   <source srcset={UrlsImage.avif} type="image/avif" />
   <img
