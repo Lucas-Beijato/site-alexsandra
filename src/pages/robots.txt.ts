@@ -4,15 +4,14 @@ const GET: APIRoute = async (request) => {
   let url = `User-agent: *
 Allow: /
 
-Sitemap: ${request.url.origin}/sitemap.xml`
+Sitemap: ${request.url.origin}/sitemap.xml`;
 
   return new Response(url, {
     status: 200,
     headers: {
-      "Content-Type": "text/plain"
-    }
-  }
-  );
-}
+      "Content-Type": "text/plain",
+    },
+  });
+};
 
-export { GET }
+export { GET };

@@ -3,6 +3,7 @@ export const prerender = false;
 import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import ImageLoader from "../../components/global/ImageLoader.astro";
+import LayoutContainer from "../../components/global/LayoutContainer.astro";
 
 const CanvasesForSale = await getCollection("canvases", (canvas) => {
     if (canvas.data.for_sale === true) {
@@ -17,11 +18,8 @@ const CanvasesForSale = await getCollection("canvases", (canvas) => {
 </head>
 
 <Layout>
-
-    <div class="w-full flex flex-col justify-center items-center">
-        <div class="w-full xl:w-screen-content-limit flex flex-col justify-center items-center my-20 gap-20 px-4">
-
-            <div class="flex flex-col w-full">
+    <LayoutContainer>
+            <div class="flex flex-col w-full mb-20">
                 <h1 class="w-full font-glacial-indifference text-6xl">A Venda</h1>
                 <p class="w-full">Confira todas as artes disponíveis para compra.</p>
             </div>
@@ -44,7 +42,5 @@ const CanvasesForSale = await getCollection("canvases", (canvas) => {
                   })
                 }
               </div>
-        </div>
-    </div>
-    
+    </LayoutContainer>
 </Layout>

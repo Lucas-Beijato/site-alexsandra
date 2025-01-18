@@ -1,4 +1,5 @@
 ---
+import LayoutContainer from "../components/global/LayoutContainer.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -8,11 +9,9 @@ import Layout from "../layouts/Layout.astro";
 </head>
 
 <Layout>
+  <LayoutContainer>
 
-  <div class="w-full flex flex-col justify-center items-center">
-    <div class="w-full xl:w-screen-content-limit flex flex-col justify-center items-center my-20 gap-20 px-4">
-
-      <div class="flex flex-col w-full">
+      <div class="flex flex-col w-full mb-20">
         <h1 class="w-full font-glacial-indifference text-6xl">Contato</h1>
         <p class="w-full">Entre em contato atravéz de um dos canais disponíveis.</p>
       </div>
@@ -87,7 +86,5 @@ import Layout from "../layouts/Layout.astro";
         </div>
         
       </div>      
-    </div>
-  </div>
-
+  </LayoutContainer>
 </Layout>

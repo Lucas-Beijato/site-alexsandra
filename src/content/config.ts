@@ -15,7 +15,7 @@ const canvasesCollection = defineCollection({
     painting_style: z.string(),
     featured: z.boolean(),
     for_sale: z.boolean(),
-    price: z.number()
+    price: z.number(),
   }),
 });
 
