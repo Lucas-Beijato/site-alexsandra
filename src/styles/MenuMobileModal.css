@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .modal-overlay {
+        @apply fixed top-0 left-0 w-screen h-screen flex justify-center items-center opacity-0 invisible z-[1000];
+
+        background: rgba(0, 0, 0, 0.5);
+        transition:
+            opacity 0.3s ease,
+            visibility 0.3s ease;
+    }
+
+    .modal-overlay.visible {
+        @apply opacity-100;
+        visibility: visible;
+    }
+
+    .modal-content {
+        @apply bg-white p-6 rounded-lg relative;
+        transform: translateY(-20px);
+        transition: transform 0.3s ease;
+    }
+
+    .modal-overlay.visible .modal-content {
+        transform: translateY(0);
+    }
+}
