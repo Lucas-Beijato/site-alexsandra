@@ -1,8 +1,7 @@
 ---
 import { getEntry } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
-import CanvasImageLoader from "../../components/singleCanvas/CanvasImageLoader.astro";
-import CanvasFeaturedImageLoader from "../../components/singleCanvas/CanvasFeaturedImageLoader.astro";
+import ImageLoader from "../../components/global/ImageLoader.astro";
 export const prerender = false;
 
 const { path } = Astro.params;
@@ -32,7 +31,7 @@ const whatsappContactLink = `https://api.whatsapp.com/send?phone=556984769121&te
             
             <div class="w-full flex flex-col xl:flex-row gap-x-6 mb-11 xl:mb-20 px-4 gap-y-4">
                 <div class="w-full xl:w-2/3 flex flex-col justify-center items-end">
-                    <CanvasFeaturedImageLoader featuredImageUrl={canvas.data.featured_image}/>
+                    <ImageLoader ImageUrl={canvas.data.featured_image} w="600" h="600" altParam="Featured Canvas Image"/>
                 </div>
                 <div class="w-full xl:w-1/3 flex flex-col">
                     <h1 class="text-4xl pb-6">{canvas.data.name}</h1>
@@ -58,7 +57,9 @@ const whatsappContactLink = `https://api.whatsapp.com/send?phone=556984769121&te
                 {
                     canvas.data.image_list.map((imageUrl) => (
                         <div class="">
-                            <CanvasImageLoader ImageUrl={imageUrl}/>
+                            <a href={imageUrl} target="_blank">
+                                <ImageLoader ImageUrl={imageUrl} w="600" h="600" altParam="canvas images"/>
+                            </a>
                         </div>
                     ))
                 }

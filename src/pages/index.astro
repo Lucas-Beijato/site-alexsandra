@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import SectionFeatured from "../components/home/Section_featured.astro";
-import AlexImageLoader from "../components/home/AlexImageLoader.astro";
+import ImageLoader from "../components/global/ImageLoader.astro";
 ---
 
 <head>
@@ -21,7 +21,7 @@ import AlexImageLoader from "../components/home/AlexImageLoader.astro";
 	<div class="w-full flex flex-col justify-center items-center">
 		<div class="flex flex-col gap-y-5 xl:flex-row w-full xl:w-screen-content-limit px-5 my-10">
 			<div class="w-full xl:w-1/2 flex flex-row justify-center items-center">
-				<AlexImageLoader/>
+				<ImageLoader ImageUrl="/pictures/base/foto_Alexsandra" w="400" h="400" altParam="Foto Alexsandra"/>
 			</div>
 			<div class="w-full xl:w-1/2 flex flex-col justify-center">
 				<h2 class="text-4xl">Sobre mim:</h2>

@@ -17,7 +17,6 @@ const CanvasesGallery = await getCollection("canvases", (canvas) => {
 </head>
 
 <Layout>
-
     <div class="w-full flex flex-col justify-center items-center">
         <div class="w-full xl:w-screen-content-limit flex flex-col justify-center items-center my-20 gap-20 px-4">
 
@@ -33,7 +32,7 @@ const CanvasesGallery = await getCollection("canvases", (canvas) => {
                       return (
                         <a href={`/galeria/${item.data.slug}`}>
                           <div class="flex flex-col justify-start items-start bg-gray-100 rounded-md hover:bg-dark-brown hover:text-white transition duration-150 transform">
-                            <ImageLoader ImageUrl={item.data.featured_image} w="400" h="400"/>
+                            <ImageLoader ImageUrl={item.data.featured_image} w="400" h="400" altParam="Featured Canvas Image"/>
                             <div class="px-3 pb-3">
                               <h3 class="mt-4 text-xl">{item.data.name}</h3>
                             </div>
@@ -46,5 +45,4 @@ const CanvasesGallery = await getCollection("canvases", (canvas) => {
               </div>
         </div>
     </div>
-
 </Layout>
