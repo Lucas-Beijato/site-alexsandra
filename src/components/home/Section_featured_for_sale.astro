@@ -12,10 +12,10 @@ const featured = await getCollection("canvases", (canvas) => {
 
 <div class="w-full flex flex-col gap-y-10 my-10">
   <div class="flex flex-row justify-between items-center">
-    <h3 class="text-lg xl:text-2xl">Coleção Destaque</h3>
+    <h3 class="text-lg xl:text-2xl">Destaques a venda</h3>
     <a
       class="ms-0 py-1 px-1 xl:py-2 xl:px-2 flex justify-center text-sm xl:text-base font-medium rounded-lg items-center gap-x-2 h-fit border-2 border-medium-brown bg-medium-brown hover:bg-dark-brown text-white focus:outline-none focus:bg-medium-brown transition duration-150"
-      href="/galeria">Ver Mais</a
+      href="/a_venda">Ver Mais</a
     >
   </div>
 
@@ -24,7 +24,7 @@ const featured = await getCollection("canvases", (canvas) => {
   >
     {
       featured.map((item) => {
-        if (!item.data.for_sale) {
+        if (item.data.for_sale) {
           return (
             <CanvasCard
               slug={item.data.slug}
@@ -39,7 +39,7 @@ const featured = await getCollection("canvases", (canvas) => {
   </div>
 
   <p class="text-base xl:text-lg">
-    Explore as obras em destaque e descubra peças que contam histórias através
-    da arte a óleo.
+    Leve um toque de arte para sua vida. Confira as peças disponíveis para
+    adquirir e transformar seus espaços.
   </p>
 </div>

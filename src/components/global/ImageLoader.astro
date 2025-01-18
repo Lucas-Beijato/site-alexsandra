@@ -1,18 +1,23 @@
 ---
-import type { ImagesUrls } from "../../assets/types"
+import type { ImagesUrls } from "../../assets/types";
 
-const { ImageUrl, w, h, altParam } = Astro.props
+const { ImageUrl, w, h, altParam } = Astro.props;
 
 const UrlsImage: ImagesUrls = {
   avif: `${ImageUrl}.avif`,
   webp: `${ImageUrl}.webp`,
   jpg: `${ImageUrl}.jpg`,
-}
+};
 ---
 
 <picture>
-    <source srcset={UrlsImage.webp} type="image/webp">
-    <source srcset={UrlsImage.avif} type="image/avif">
-    <img width={w} height={h} class="rounded-md" src={UrlsImage.jpg} alt={altParam}>
+  <source srcset={UrlsImage.webp} type="image/webp" />
+  <source srcset={UrlsImage.avif} type="image/avif" />
+  <img
+    width={w}
+    height={h}
+    class="w-full rounded-md"
+    src={UrlsImage.jpg}
+    alt={altParam}
+  />
 </picture>
-
