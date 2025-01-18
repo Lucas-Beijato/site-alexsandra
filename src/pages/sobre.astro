@@ -1,15 +1,21 @@
 ---
 import LayoutContainer from "../components/global/LayoutContainer.astro";
+import TitleComponent from "../components/global/TitleComponent.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <head>
-    <meta name="description" content="test" />
-    <title>{"Sobre" + " | Alexsandra Beijato"}</title>
+  <meta name="description" content="test" />
+  <title>{"Sobre" + " | Alexsandra Beijato"}</title>
 </head>
 
 <Layout>
   <LayoutContainer>
+    <TitleComponent
+      title="Sobre mim"
+      sub="Conheça um pouco da história de Alexsandra."
+    />
+
     <p>Only a test</p>
   </LayoutContainer>
 </Layout>
