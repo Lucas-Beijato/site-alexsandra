@@ -20,22 +20,14 @@ import "../styles/global.css";
 </html>
 
 <script>
-	window.addEventListener("resize", () => {
-		let headerHeight: number;
-
-		if (window.innerWidth >= 1280) {
-			headerHeight = document
-				.querySelectorAll("header")
-				.item(0)
-				.getBoundingClientRect().height;
-		} else {
-			headerHeight = document
-				.querySelectorAll("header")
-				.item(1)
-				.getBoundingClientRect().height;
-		}
-
-		document.querySelector("body").style.paddingTop =
-			headerHeight.toString() + "px";
-	});
+	function SetContentPaddingForHeader() {
+		document.querySelectorAll("header").forEach((item) => {
+			if (getComputedStyle(item).display !== "none") {
+				document.querySelector("body").style.paddingTop =
+					item.getBoundingClientRect().height.toString() + "px";
+			}
+		});
+	}
+	SetContentPaddingForHeader();
+	window.addEventListener("resize", () => SetContentPaddingForHeader());
 </script>
