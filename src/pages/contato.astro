@@ -1,5 +1,6 @@
 ---
 import LayoutContainer from "../components/global/LayoutContainer.astro";
+import TitleComponent from "../components/global/TitleComponent.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -9,82 +10,85 @@ import Layout from "../layouts/Layout.astro";
 </head>
 
 <Layout>
-  <LayoutContainer>
+    <LayoutContainer>
+        <TitleComponent
+            title="Contato"
+            sub="Entre em contato atravéz de um dos canais disponíveis."
+        />
 
-      <div class="flex flex-col w-full mb-20">
-        <h1 class="w-full font-glacial-indifference text-6xl">Contato</h1>
-        <p class="w-full">Entre em contato atravéz de um dos canais disponíveis.</p>
-      </div>
-
-      <div class="w-full flex flex-col justify-center items-center gap-5">
-        <div class="w-fit flex flex-col justify-center items-center gap-y-3">
-          <h2 class="text-3xl">Redes Sociais</h2>
-          <div class="w-1/2 flex flex-row justify-center items-center">
-            <a
-                class="w-8 h-8 py-1 px-1 flex justify-center items-center gap-x-2 focus:outline-none rounded-md text-medium-brown hover:text-dark-brown transition duration-150"
-                href="contato"
-                ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 32 32"
-                    ><path
-                        fill="currentColor"
-                        d="M16 0c-4.349 0-4.891.021-6.593.093c-1.709.084-2.865.349-3.885.745a7.85 7.85 0 0 0-2.833 1.849A7.8 7.8 0 0 0 .84 5.52C.444 6.54.179 7.696.095 9.405c-.077 1.703-.093 2.244-.093 6.593s.021 4.891.093 6.593c.084 1.704.349 2.865.745 3.885a7.85 7.85 0 0 0 1.849 2.833a7.8 7.8 0 0 0 2.833 1.849c1.02.391 2.181.661 3.885.745c1.703.077 2.244.093 6.593.093s4.891-.021 6.593-.093c1.704-.084 2.865-.355 3.885-.745a7.85 7.85 0 0 0 2.833-1.849a7.7 7.7 0 0 0 1.849-2.833c.391-1.02.661-2.181.745-3.885c.077-1.703.093-2.244.093-6.593s-.021-4.891-.093-6.593c-.084-1.704-.355-2.871-.745-3.885a7.85 7.85 0 0 0-1.849-2.833A7.7 7.7 0 0 0 26.478.838c-1.02-.396-2.181-.661-3.885-.745C20.89.016 20.349 0 16 0m0 2.88c4.271 0 4.781.021 6.469.093c1.557.073 2.405.333 2.968.553a5 5 0 0 1 1.844 1.197a4.9 4.9 0 0 1 1.192 1.839c.22.563.48 1.411.553 2.968c.072 1.688.093 2.199.093 6.469s-.021 4.781-.099 6.469c-.084 1.557-.344 2.405-.563 2.968c-.303.751-.641 1.276-1.199 1.844a5.05 5.05 0 0 1-1.844 1.192c-.556.22-1.416.48-2.979.553c-1.697.072-2.197.093-6.479.093s-4.781-.021-6.48-.099c-1.557-.084-2.416-.344-2.979-.563c-.76-.303-1.281-.641-1.839-1.199c-.563-.563-.921-1.099-1.197-1.844c-.224-.556-.48-1.416-.563-2.979c-.057-1.677-.084-2.197-.084-6.459c0-4.26.027-4.781.084-6.479c.083-1.563.339-2.421.563-2.979c.276-.761.635-1.281 1.197-1.844c.557-.557 1.079-.917 1.839-1.199c.563-.219 1.401-.479 2.964-.557c1.697-.061 2.197-.083 6.473-.083zm0 4.907A8.21 8.21 0 0 0 7.787 16A8.21 8.21 0 0 0 16 24.213A8.21 8.21 0 0 0 24.213 16A8.21 8.21 0 0 0 16 7.787m0 13.546c-2.948 0-5.333-2.385-5.333-5.333s2.385-5.333 5.333-5.333s5.333 2.385 5.333 5.333s-2.385 5.333-5.333 5.333M26.464 7.459a1.923 1.923 0 0 1-1.923 1.921a1.919 1.919 0 1 1 0-3.838c1.057 0 1.923.86 1.923 1.917"
-                    ></path></svg
-                ></a
+        <div class="w-full flex flex-col justify-center items-center gap-5">
+            <div
+                class="w-fit flex flex-col justify-center items-center gap-y-3"
             >
-            <a
-                class="w-8 h-8 py-1 px-1 flex justify-center items-center gap-x-2 focus:outline-none rounded-md text-medium-brown hover:text-dark-brown transition duration-150"
-                href="contato"
-                ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 32 32"
-                    ><path
-                        fill="currentColor"
-                        d="m23.446 18l.889-5.791h-5.557V8.451c0-1.584.776-3.129 3.265-3.129h2.526V.392S22.277.001 20.085.001c-4.576 0-7.567 2.774-7.567 7.795v4.414H7.431v5.791h5.087v14h6.26v-14z"
-                    ></path></svg
-                ></a
+                <h2 class="text-3xl">Redes Sociais</h2>
+                <div class="w-1/2 flex flex-row justify-center items-center">
+                    <a
+                        class="w-8 h-8 py-1 px-1 flex justify-center items-center gap-x-2 focus:outline-none rounded-md text-medium-brown hover:text-dark-brown transition duration-150"
+                        href="contato"
+                        ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="32"
+                            height="32"
+                            viewBox="0 0 32 32"
+                            ><path
+                                fill="currentColor"
+                                d="M16 0c-4.349 0-4.891.021-6.593.093c-1.709.084-2.865.349-3.885.745a7.85 7.85 0 0 0-2.833 1.849A7.8 7.8 0 0 0 .84 5.52C.444 6.54.179 7.696.095 9.405c-.077 1.703-.093 2.244-.093 6.593s.021 4.891.093 6.593c.084 1.704.349 2.865.745 3.885a7.85 7.85 0 0 0 1.849 2.833a7.8 7.8 0 0 0 2.833 1.849c1.02.391 2.181.661 3.885.745c1.703.077 2.244.093 6.593.093s4.891-.021 6.593-.093c1.704-.084 2.865-.355 3.885-.745a7.85 7.85 0 0 0 2.833-1.849a7.7 7.7 0 0 0 1.849-2.833c.391-1.02.661-2.181.745-3.885c.077-1.703.093-2.244.093-6.593s-.021-4.891-.093-6.593c-.084-1.704-.355-2.871-.745-3.885a7.85 7.85 0 0 0-1.849-2.833A7.7 7.7 0 0 0 26.478.838c-1.02-.396-2.181-.661-3.885-.745C20.89.016 20.349 0 16 0m0 2.88c4.271 0 4.781.021 6.469.093c1.557.073 2.405.333 2.968.553a5 5 0 0 1 1.844 1.197a4.9 4.9 0 0 1 1.192 1.839c.22.563.48 1.411.553 2.968c.072 1.688.093 2.199.093 6.469s-.021 4.781-.099 6.469c-.084 1.557-.344 2.405-.563 2.968c-.303.751-.641 1.276-1.199 1.844a5.05 5.05 0 0 1-1.844 1.192c-.556.22-1.416.48-2.979.553c-1.697.072-2.197.093-6.479.093s-4.781-.021-6.48-.099c-1.557-.084-2.416-.344-2.979-.563c-.76-.303-1.281-.641-1.839-1.199c-.563-.563-.921-1.099-1.197-1.844c-.224-.556-.48-1.416-.563-2.979c-.057-1.677-.084-2.197-.084-6.459c0-4.26.027-4.781.084-6.479c.083-1.563.339-2.421.563-2.979c.276-.761.635-1.281 1.197-1.844c.557-.557 1.079-.917 1.839-1.199c.563-.219 1.401-.479 2.964-.557c1.697-.061 2.197-.083 6.473-.083zm0 4.907A8.21 8.21 0 0 0 7.787 16A8.21 8.21 0 0 0 16 24.213A8.21 8.21 0 0 0 24.213 16A8.21 8.21 0 0 0 16 7.787m0 13.546c-2.948 0-5.333-2.385-5.333-5.333s2.385-5.333 5.333-5.333s5.333 2.385 5.333 5.333s-2.385 5.333-5.333 5.333M26.464 7.459a1.923 1.923 0 0 1-1.923 1.921a1.919 1.919 0 1 1 0-3.838c1.057 0 1.923.86 1.923 1.917"
+                            ></path></svg
+                        ></a
+                    >
+                    <a
+                        class="w-8 h-8 py-1 px-1 flex justify-center items-center gap-x-2 focus:outline-none rounded-md text-medium-brown hover:text-dark-brown transition duration-150"
+                        href="contato"
+                        ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="32"
+                            height="32"
+                            viewBox="0 0 32 32"
+                            ><path
+                                fill="currentColor"
+                                d="m23.446 18l.889-5.791h-5.557V8.451c0-1.584.776-3.129 3.265-3.129h2.526V.392S22.277.001 20.085.001c-4.576 0-7.567 2.774-7.567 7.795v4.414H7.431v5.791h5.087v14h6.26v-14z"
+                            ></path></svg
+                        ></a
+                    >
+                    <a
+                        class="w-8 h-8 py-1 px-1 flex justify-center items-center gap-x-2 focus:outline-none rounded-md text-medium-brown hover:text-dark-brown transition duration-150"
+                        href="contato"
+                        ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="32"
+                            height="32"
+                            viewBox="0 0 32 32"
+                            ><path
+                                fill="currentColor"
+                                d="M16.021 0C7.193 0 .037 7.156.037 15.984c0 6.771 4.214 12.552 10.161 14.88c-.141-1.266-.266-3.203.052-4.583c.292-1.25 1.875-7.943 1.875-7.943s-.479-.964-.479-2.375c0-2.219 1.292-3.88 2.891-3.88c1.365 0 2.026 1.021 2.026 2.25c0 1.37-.87 3.422-1.323 5.323c-.38 1.589.797 2.885 2.365 2.885c2.839 0 5.026-2.995 5.026-7.318c0-3.813-2.75-6.49-6.677-6.49c-4.547 0-7.214 3.417-7.214 6.932c0 1.375.526 2.854 1.188 3.651c.13.161.146.302.109.464c-.12.5-.391 1.599-.443 1.818c-.073.297-.229.359-.536.219c-1.99-.922-3.245-3.839-3.245-6.193c0-5.036 3.667-9.672 10.563-9.672c5.542 0 9.854 3.958 9.854 9.229c0 5.516-3.474 9.953-8.307 9.953c-1.62 0-3.141-.839-3.677-1.839l-1 3.797c-.359 1.391-1.339 3.135-2 4.193c1.5.458 3.078.714 4.734.714c8.813 0 15.979-7.151 15.979-15.984C31.959 7.187 24.792.036 15.98.036z"
+                            ></path></svg
+                        ></a
+                    >
+                    <a
+                        class="w-8 h-8 py-1 px-1 flex justify-center items-center gap-x-2 focus:outline-none rounded-md text-medium-brown hover:text-dark-brown transition duration-150"
+                        href="contato"
+                        ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="32"
+                            height="32"
+                            viewBox="0 0 32 32"
+                            ><path
+                                fill="currentColor"
+                                d="M16.708.027C18.453 0 20.188.016 21.921 0c.105 2.041.839 4.12 2.333 5.563c1.491 1.479 3.6 2.156 5.652 2.385v5.369c-1.923-.063-3.855-.463-5.6-1.291c-.76-.344-1.468-.787-2.161-1.24c-.009 3.896.016 7.787-.025 11.667c-.104 1.864-.719 3.719-1.803 5.255c-1.744 2.557-4.771 4.224-7.88 4.276c-1.907.109-3.812-.411-5.437-1.369C4.307 29.027 2.412 26.12 2.136 23a22 22 0 0 1-.016-1.984c.24-2.537 1.495-4.964 3.443-6.615c2.208-1.923 5.301-2.839 8.197-2.297c.027 1.975-.052 3.948-.052 5.923c-1.323-.428-2.869-.308-4.025.495a4.62 4.62 0 0 0-1.819 2.333c-.276.676-.197 1.427-.181 2.145c.317 2.188 2.421 4.027 4.667 3.828c1.489-.016 2.916-.88 3.692-2.145c.251-.443.532-.896.547-1.417c.131-2.385.079-4.76.095-7.145c.011-5.375-.016-10.735.025-16.093z"
+                            ></path></svg
+                        ></a
+                    >
+                </div>
+            </div>
+            <div
+                class="w-fit flex flex-col justify-center items-center gap-y-3"
             >
-            <a
-                class="w-8 h-8 py-1 px-1 flex justify-center items-center gap-x-2 focus:outline-none rounded-md text-medium-brown hover:text-dark-brown transition duration-150"
-                href="contato"
-                ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 32 32"
-                    ><path
-                        fill="currentColor"
-                        d="M16.021 0C7.193 0 .037 7.156.037 15.984c0 6.771 4.214 12.552 10.161 14.88c-.141-1.266-.266-3.203.052-4.583c.292-1.25 1.875-7.943 1.875-7.943s-.479-.964-.479-2.375c0-2.219 1.292-3.88 2.891-3.88c1.365 0 2.026 1.021 2.026 2.25c0 1.37-.87 3.422-1.323 5.323c-.38 1.589.797 2.885 2.365 2.885c2.839 0 5.026-2.995 5.026-7.318c0-3.813-2.75-6.49-6.677-6.49c-4.547 0-7.214 3.417-7.214 6.932c0 1.375.526 2.854 1.188 3.651c.13.161.146.302.109.464c-.12.5-.391 1.599-.443 1.818c-.073.297-.229.359-.536.219c-1.99-.922-3.245-3.839-3.245-6.193c0-5.036 3.667-9.672 10.563-9.672c5.542 0 9.854 3.958 9.854 9.229c0 5.516-3.474 9.953-8.307 9.953c-1.62 0-3.141-.839-3.677-1.839l-1 3.797c-.359 1.391-1.339 3.135-2 4.193c1.5.458 3.078.714 4.734.714c8.813 0 15.979-7.151 15.979-15.984C31.959 7.187 24.792.036 15.98.036z"
-                    ></path></svg
-                ></a
-            >
-            <a
-                class="w-8 h-8 py-1 px-1 flex justify-center items-center gap-x-2 focus:outline-none rounded-md text-medium-brown hover:text-dark-brown transition duration-150"
-                href="contato"
-                ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 32 32"
-                    ><path
-                        fill="currentColor"
-                        d="M16.708.027C18.453 0 20.188.016 21.921 0c.105 2.041.839 4.12 2.333 5.563c1.491 1.479 3.6 2.156 5.652 2.385v5.369c-1.923-.063-3.855-.463-5.6-1.291c-.76-.344-1.468-.787-2.161-1.24c-.009 3.896.016 7.787-.025 11.667c-.104 1.864-.719 3.719-1.803 5.255c-1.744 2.557-4.771 4.224-7.88 4.276c-1.907.109-3.812-.411-5.437-1.369C4.307 29.027 2.412 26.12 2.136 23a22 22 0 0 1-.016-1.984c.24-2.537 1.495-4.964 3.443-6.615c2.208-1.923 5.301-2.839 8.197-2.297c.027 1.975-.052 3.948-.052 5.923c-1.323-.428-2.869-.308-4.025.495a4.62 4.62 0 0 0-1.819 2.333c-.276.676-.197 1.427-.181 2.145c.317 2.188 2.421 4.027 4.667 3.828c1.489-.016 2.916-.88 3.692-2.145c.251-.443.532-.896.547-1.417c.131-2.385.079-4.76.095-7.145c.011-5.375-.016-10.735.025-16.093z"
-                    ></path></svg
-                ></a
-            >
-          </div>
+                <a
+                    class="ms-0 py-2 px-2 flex justify-center text-base font-medium rounded-lg items-center gap-x-2 h-fit border-2 border-medium-brown bg-medium-brown hover:bg-dark-brown text-white focus:outline-none focus:bg-medium-brown transition duration-150"
+                    href="https://wa.me/556984769121"
+                    target="_blank">Whatsapp</a
+                >
+            </div>
         </div>
-        <div class="w-fit flex flex-col justify-center items-center gap-y-3">
-          <a
-          class="ms-0 py-2 px-2 flex justify-center text-base font-medium rounded-lg items-center gap-x-2 h-fit border-2 border-medium-brown bg-medium-brown hover:bg-dark-brown text-white focus:outline-none focus:bg-medium-brown transition duration-150"
-          href="https://wa.me/556984769121" target="_blank">Whatsapp</a
-          >
-        </div>
-        
-      </div>      
-  </LayoutContainer>
+    </LayoutContainer>
 </Layout>

@@ -4,43 +4,50 @@ import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import ImageLoader from "../../components/global/ImageLoader.astro";
 import LayoutContainer from "../../components/global/LayoutContainer.astro";
+import TitleComponent from "../../components/global/TitleComponent.astro";
 
 const CanvasesForSale = await getCollection("canvases", (canvas) => {
-    if (canvas.data.for_sale === true) {
-        return canvas;
-    }
+  if (canvas.data.for_sale === true) {
+    return canvas;
+  }
 });
 ---
 
 <head>
-    <meta name="description" content="test" />
-    <title>{"A Venda" + " | Alexsandra Beijato"}</title>
+  <meta name="description" content="test" />
+  <title>{"A Venda" + " | Alexsandra Beijato"}</title>
 </head>
 
 <Layout>
-    <LayoutContainer>
-            <div class="flex flex-col w-full mb-20">
-                <h1 class="w-full font-glacial-indifference text-6xl">A Venda</h1>
-                <p class="w-full">Confira todas as artes disponíveis para compra.</p>
-            </div>
+  <LayoutContainer>
+    <TitleComponent
+      title="A Venda"
+      sub="Confira todas as artes disponíveis para compra."
+    />
 
-            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 grid-flow-row gap-4">
-                {
-                  CanvasesForSale.map((item) => {
-                    if (item.data.for_sale) {
-                      return (
-                        <a href={`/a_venda/${item.data.slug}`}>
-                          <div class="flex flex-col justify-start items-start bg-gray-100 rounded-md hover:bg-dark-brown hover:text-white transition duration-150 transform">
-                            <ImageLoader ImageUrl={item.data.featured_image} w="400" h="400"/>
-                            <div class="px-3 pb-3">
-                              <h3 class="mt-4 text-xl">{item.data.name}</h3>
-                            </div>
-                          </div>
-                        </a>
-                      );
-                    }
-                  })
-                }
-              </div>
-    </LayoutContainer>
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 grid-flow-row gap-4"
+    >
+      {
+        CanvasesForSale.map((item) => {
+          if (item.data.for_sale) {
+            return (
+              <a href={`/a_venda/${item.data.slug}`}>
+                <div class="flex flex-col justify-start items-start bg-gray-100 rounded-md hover:bg-dark-brown hover:text-white transition duration-150 transform">
+                  <ImageLoader
+                    ImageUrl={item.data.featured_image}
+                    w="400"
+                    h="400"
+                  />
+                  <div class="px-3 pb-3">
+                    <h3 class="mt-4 text-xl">{item.data.name}</h3>
+                  </div>
+                </div>
+              </a>
+            );
+          }
+        })
+      }
+    </div>
+  </LayoutContainer>
 </Layout>
