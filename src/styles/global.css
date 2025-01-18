@@ -23,7 +23,7 @@ h4 {
 
 @font-face {
     font-family: "Halimum";
-    src: url("/fonts/halimum/halimun.woff") format("woff");
+    src: url("/fonts/halimum/halimun.woff2") format("woff2");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -31,7 +31,7 @@ h4 {
 
 @font-face {
     font-family: "Glacial Indifference";
-    src: url("/fonts/glacial-indifference/glacial-indifference-regular.woff") format("woff");
+    src: url("/fonts/glacial-indifference/glacial-indifference-regular.woff2") format("woff2");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -39,15 +39,15 @@ h4 {
 
 @font-face {
     font-family: "Glacial Indifference";
-    src: url("/fonts/glacial-indifference/glacial-indifference-bold.woff") format("woff");
+    src: url("/fonts/glacial-indifference/glacial-indifference-bold.woff2") format("woff2");
     font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
 
-@font-face {
+/* @font-face {
     font-family: "Poppins";
-    src: url("/fonts/poppins/poppins-regular.woff") format("woff");
+    src: url("/fonts/poppins/poppins-regular.woff2") format("woff2");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -55,7 +55,7 @@ h4 {
 
 @font-face {
     font-family: "Poppins";
-    src: url("/fonts/poppins/poppins-medium.woff") format("woff");
+    src: url("/fonts/poppins/poppins-medium.woff2") format("woff2");
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -63,8 +63,8 @@ h4 {
 
 @font-face {
     font-family: "Poppins";
-    src: url("/fonts/poppins/poppins-semibold.woff") format("woff");
+    src: url("/fonts/poppins/poppins-semibold.woff2") format("woff2");
     font-weight: 600;
     font-style: normal;
     font-display: swap;
-}
+} */
