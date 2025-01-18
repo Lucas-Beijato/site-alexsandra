@@ -1,7 +1,7 @@
 ---
 import type { ImagesUrls } from "../../assets/types";
 
-const { ImageUrl, w, h, altParam } = Astro.props;
+const { ImageUrl, w, h, altParam, fullW } = Astro.props;
 
 const UrlsImage: ImagesUrls = {
   avif: `${ImageUrl}.avif`,
@@ -16,7 +16,7 @@ const UrlsImage: ImagesUrls = {
   <img
     width={w}
     height={h}
-    class="w-full rounded-md"
+    class={"rounded-md " + (fullW ? "w-full" : " ")}
     src={UrlsImage.jpg}
     alt={altParam}
   />
