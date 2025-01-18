@@ -4,7 +4,7 @@ import ImageLoader from "./ImageLoader.astro";
 const { slug, featured_image_url, name, description } = Astro.props;
 ---
 
-<a href={`/a_venda/${slug}`}>
+<a href={slug}>
     <div
         class="bg-white min-w-[250px] hover:bg-gray-100 transition duration-150 shadow-lg rounded-lg overflow-hidden border border-black"
     >

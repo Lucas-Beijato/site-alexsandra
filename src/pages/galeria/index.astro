@@ -34,7 +34,7 @@ const CanvasesGallery = await getCollection("canvases", (canvas) => {
           if (!item.data.for_sale) {
             return (
               <CanvasCard
-                slug={item.data.slug}
+                slug={`/galeria/${item.data.slug}`}
                 featured_image_url={item.data.featured_image}
                 name={item.data.name}
                 description={item.data.description}
